@@ -17,7 +17,7 @@ public class DemoProperties {
     }
     //load
     private static void show3() throws IOException {
-        FileReader r = new FileReader("E:\\project\\java\\pro\\study\\c.txt");
+        FileReader r = new FileReader("E:\\project\\java\\pro\\study\\java-demo\\c.txt");
         Properties p = new Properties();
         p.load(r);
         Set<String> s = p.stringPropertyNames();
