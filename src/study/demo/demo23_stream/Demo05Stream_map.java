@@ -1,7 +1,6 @@
-package study.demo.demo23;
+package study.demo.demo23_stream;
 
 import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.stream.Stream;
 
 //如果需要将流中的元素映射到另一个流中，可以使用map方法

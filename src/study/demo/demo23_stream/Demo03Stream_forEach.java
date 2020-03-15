@@ -1,4 +1,4 @@
-package study.demo.demo23;
+package study.demo.demo23_stream;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;

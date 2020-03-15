@@ -1,4 +1,4 @@
-package study.demo.demo23;
+package study.demo.demo23_stream;
 
 import java.util.function.Consumer;
 import java.util.function.Predicate;
