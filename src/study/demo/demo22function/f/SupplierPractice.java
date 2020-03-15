@@ -1,4 +1,4 @@
-package study.demo.demo22function;
+package study.demo.demo22function.f;
 
 import java.util.Arrays;
 import java.util.function.Supplier;
