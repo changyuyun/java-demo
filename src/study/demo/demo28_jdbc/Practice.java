@@ -2,10 +2,7 @@ package study.demo.demo28_jdbc;
 
 import study.demo.util.JDBCUtils;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Scanner;
 //登陆案例
 public class Practice {
@@ -32,9 +29,16 @@ public class Practice {
         ResultSet resultSet = null;
         try {
             conn = JDBCUtils.getConnection();
-            String sql = "select * from user where name='" + name + "' and pwd='" + pwd + "'";
+            /*String sql = "select * from user where name='" + name + "' and pwd='" + pwd + "'";
             stmt = conn.createStatement();
-            resultSet = stmt.executeQuery(sql);
+            resultSet = stmt.executeQuery(sql);*/
+            /*********************prepare start *****************************/
+            String prepareSql = "select * from user where name=? and pwd=?";
+            PreparedStatement prepareStmt = conn.prepareStatement(prepareSql);
+            prepareStmt.setString(1, name);
+            prepareStmt.setString(2, pwd);
+            resultSet = prepareStmt.executeQuery();
+            /*************************prepare end**************************************/
             if (!resultSet.next()) {
                 return false;
             }
